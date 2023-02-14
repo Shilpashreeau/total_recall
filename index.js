@@ -98,34 +98,216 @@ console.log("moooo");
 Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
 
 
+let age=20;
+if(age>=16){
+console.log("Here are the keys!");
+}else {
+    console.log("Sorry, you're too young.")
+}
 
 
-
-
+//------------------------------------------------------------------------------------
 
 // II. Loops
 // A. The Basics
+/*Write a loop that will print out all the numbers from 0 to 10, inclusive
+for(let i=0;i<=10;i++){
+    console.log(i);
+}
+
+Write a loop that will print out all the numbers from 10 up to and including 400
+for(let i=10;i<=400;i++){
+    console.log(i);
+}
+//Write a loop that will print out every third number starting with 12 and going no higher than 4000
+for(let i=12;i<4000;i+=3){
+    console.log(i);
+}
 // B. Get even
+//Print out the numbers that are within the range of 1 - 100
+for(let i=2;i<=100;i+=2){
+console.log(i);
+}
+//Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+for(let i=2;i<=100;i+=2){
+    console.log(`${i} is an even number`);
+    }*/
 // C. Give me Five
+//For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+// for(let i=0;i<=100;i++){
+//     if(i===0){
+//     continue;
+//     }
+// if(i%5==0){
+// console.log(`I found a ${i}. High five!`);
+// }
+
+// }
+/*Add to the code from above to print out "I found a number. Three is a crowd" if the number is a multiple of three
+
+
+    for (let i = 0; i <= 100; i++){
+        if (i % 5 === 0 && i % 3 === 0) {
+         console.log(`I found a ${i}. High Five! Three is a crowd`)
+        } else if (i % 3 === 0) {
+         console.log(`I found a ${i}. Three is a crowd`)
+        } else if (i % 5 === 0) {
+         console.log(`I found a ${i}. High Five!`)
+        }
+       }
+    
+*/
+
 // D. Savings account
+/*Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+Check your work! Your bank_account should have $55 in it.
+let bank_account=0;
+for(i=1;i<=10;i++){
+    bank_account+=i;
+
+}
+console.log(bank_account);*/
+
+
+/*You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+Check your work! Your bank_account should have $10,100 in it.
+
+let bank_account=0;
+for(i=1;i<=100;i++){
+    bank_account+=i;
+
+}
+console.log(bank_account*2);*/
+
 //_____________________________________________________________
-
-
-
-
-
-
 
 
 // III. Arrays & Control Flow
 // A. Talk about it:
+/*What are the things in an array called?
+Answer:Array elements
+
+Do Arrays guarantee those things will be in order?
+Answer: Yes elements in arrays are ordered can be referred by their indexes.
+
+What real-life thing could you model with an array?
+Answer:Shopping cart*/
+
 // B. Easy Does It
+//Create an array that contains three quotes and store it in a variable called quotes
+//let quotes=["Live","Love","Care"];
+
 // C. Accessing elements
+const randomThings = [1, 10, "Hello", true]
+//How do you access the 1st element in the array?
+randomThings[0];
+//Change the value of "Hello"to "World"
+randomThings[2]="World";
+//Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+console.log(randomThings);
+
 // D. Change values
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+//What would you write to access the 3rd element of the array?
+ourClass[2];
+//Change the value of "Github" to "Octocat"
+ourClass[4]="Octocat";
+//Add a new element, "Cloud City" to the array
+
+ourClass.push("Cloud City");
+console.log(ourClass);
 // E. Mix It Up
+const myArray = [5, 10, 500, 20];
+//Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
+myArray.push('Aegon');
+myArray.push("Lotus");
+console.log(myArray);
+
+//Remove the 5from the beginning of the array.
+myArray.shift()
+console.log(myArray);
+
+//Add the string "Bob Marley"to the beginning of the array.
+myArray.unshift("Bob Marley");
+console.log(myArray);
+
+//Remove the string of your choice from the end of the array.
+myArray.pop();
+console.log(myArray);
+//Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse()method return anything?
+myArray.reverse();
+console.log(myArray);
+// Answer: changing the order in an array is mutate . reverse() method returned opposite direction of original array
+
 // F. Biggie Smalls
+let a=prompt("Please enter the number");
+
+//console.log()s "little number" if the number is entered is less than 100
+if(Number(a)){
+if(a<100){
+console.log("little number");
+}
+//console.log()s big number if the number is greater than or equal to 100.
+
+else{
+    console.log("big number");
+}
+}else{
+console.log("Please enter number");
+}
+
 // G. Monkey in the Middle
+//console.log()little number if the number entered is less than 5.
+//If the number entered is more than 10, log big number.
+//Otherwise, log "monkey".
+let b=prompt("Please enter the number");
+
+if(Number(b)){
+    if(b<5){
+    console.log("little number");
+    }
+    else if(b>10){
+        console.log("big number");
+    }
+    else{
+        console.log("monkey");
+    }
+}else{
+    console.log("Please enter number");
+}
 // H. What's in Your Closet?
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+  
 //_____________________________________________________________
 
 
@@ -163,5 +345,3 @@ Write code that will print out "Here are the keys!", if the age is 16 years or o
 
 
 // Extra
-
-
