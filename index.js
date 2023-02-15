@@ -1,13 +1,11 @@
 // Example of What your JS File in VS Code should look like
 
-
 /*
 	Remember!!! Once you’ve completed a problem,
 	COMMENT OUT YOUR WORK before moving on to the next one.
 	This makes it easier to read and debug the current 
 	Solution you are working on.
 */
-
 
 // I. Variables & Data Types
 // A. Q + A
@@ -168,7 +166,6 @@ for(i=1;i<=10;i++){
 }
 console.log(bank_account);*/
 
-
 /*You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
 Check your work! Your bank_account should have $10,100 in it.
 
@@ -180,7 +177,6 @@ for(i=1;i<=100;i++){
 console.log(bank_account*2);*/
 
 //_____________________________________________________________
-
 
 // III. Arrays & Control Flow
 // A. Talk about it:
@@ -278,41 +274,43 @@ Answer:Shopping cart*/
 // H. What's in Your Closet?
 
 const kristynsCloset = [
-    "left shoe",
-    "cowboy boots",
-    "right sock",
-    "Per Scholas hoodie",
-    "green pants",
-    "yellow knit hat",
-    "marshmallow peeps"
-  ];
-  
-  // Thom's closet is more complicated. Check out this nested data structure!!
-  const thomsCloset = [
-    [
-      // These are Thom's shirts
-      "grey button-up",
-      "dark grey button-up",
-      "light blue button-up",
-      "blue button-up",
-    ],[
-      // These are Thom's pants
-      "grey jeans",
-      "jeans",
-      "PJs"
-    ],[
-      // Thom's accessories
-      "wool mittens",
-      "wool scarf",
-      "raybans"
-    ]
-  ];
-  /*What's Kristyn wearing today? Using bracket notation to access items in kristyns Closet, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.*/
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "Per Scholas hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps",
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],
+  [
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs",
+  ],
+  [
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans",
+  ],
+];
+/*What's Kristyn wearing today? Using bracket notation to access items in kristyns Closet, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.*/
 
 console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!");
 
 /*Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".*/
-kristynsCloset.splice(6,0,"raybans")
+kristynsCloset.splice(6, 0, "raybans");
 console.log(kristynsCloset);
 
 //Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
@@ -328,123 +326,122 @@ console.log(thomsCloset[1][1]);
 console.log(thomsCloset[2][1]);
 
 //Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
-console.log(`Thom is looking fierce in a ${thomsCloset[0][0]},${thomsCloset[1][1]} and ${thomsCloset[2][1]}!`);
-
+console.log(
+  `Thom is looking fierce in a ${thomsCloset[0][0]},${thomsCloset[1][1]} and ${thomsCloset[2][1]}!`
+);
 
 //Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
 
-thomsCloset[1][2]="Footie Pajamas";
+thomsCloset[1][2] = "Footie Pajamas";
 console.log(thomsCloset);
 //_____________________________________________________________
 
 // IV. Functions
 // A.write a function called printGreeting with a parameter name that returns a greeting with the argument interpolated into the greeting
-function printGreeting(name){
-
-return `Hello ${name}`
+function printGreeting(name) {
+  return `Hello ${name}`;
 }
 console.log(printGreeting("Shilpa"));
 // B.Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
-function printCool(userName){
-return `${userName} is cool!`
+function printCool(userName) {
+  return `${userName} is cool!`;
 }
 console.log(printCool("Shree"));
 // C.Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
-function calculateCube(num){
-return num*num*num;
+function calculateCube(num) {
+  return num * num * num;
 }
 console.log(calculateCube(5));
 // D.Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working.
-function isVowel(char){
-if(char.toUpperCase==='a'||char.toUpperCase==='e'||char.toUpperCase==='i'||char.toUpperCase==='o'|char.toUpperCase==='u'){
-return true;
-}else{
-return false;
+function isVowel(char) {
+  if (
+    char.toUpperCase === "a" ||
+    char.toUpperCase === "e" ||
+    char.toUpperCase === "i" ||
+    (char.toUpperCase === "o") | (char.toUpperCase === "u")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
-}
-console.log(isVowel('B'));
+console.log(isVowel("B"));
 
 // E.Write a function getTwoLengths that accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
-function getTwoLengths(string1,string2){
-let arr=[];
-let numberOfChar=0;
-for(let i=0; i<arguments.length;i++){
-
-numberOfChar=arguments[i].length;
-arr.push(numberOfChar);
-}
-return arr;
+function getTwoLengths(string1, string2) {
+  let arr = [];
+  let numberOfChar = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    numberOfChar = arguments[i].length;
+    arr.push(numberOfChar);
+  }
+  return arr;
 }
 console.log(getTwoLengths("Hank", "Hippopopalous"));
 // F.Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
-let array=[];
-function getMultipleLengths(arrayOfStrings){
- 
-for(let i=0;i<arrayOfStrings.length;i++){
-array.push(arrayOfStrings[i].length);
-}
-return array;
+let array = [];
+function getMultipleLengths(arrayOfStrings) {
+  for (let i = 0; i < arrayOfStrings.length; i++) {
+    array.push(arrayOfStrings[i].length);
+  }
+  return array;
 }
 console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
 // G.Define a function maxOfThree that takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
-function maxOfThree(num1,num2,num3){
-if(num1>=num2 && num1>=num3){
-return num1;
-}else if(num2>=num3 && num2>=num1){
-return num2;
-}else if(num3>=num1 && num3>=num2){
-  return num3;
-}
+function maxOfThree(num1, num2, num3) {
+  if (num1 >= num2 && num1 >= num3) {
+    return num1;
+  } else if (num2 >= num3 && num2 >= num1) {
+    return num2;
+  } else if (num3 >= num1 && num3 >= num2) {
+    return num3;
+  }
 }
 
-console.log(maxOfThree(6,6,6));
+console.log(maxOfThree(6, 6, 6));
 
 // H.Write a function printLongestWord that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
 
-
 //let resultArray = [];
-let resultArrayMax=0;
+let resultArrayMax = 0;
 function printLongestWord(argArray) {
   for (let i = 0; i < argArray.length; i++) {
     if (argArray[i].length > resultArrayMax) {
-      resultArrayMax=argArray[i].length;
-      maxString=argArray[i];
-
+      resultArrayMax = argArray[i].length;
+      maxString = argArray[i];
     }
-   
   }
   return maxString;
 }
- 
 
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
-
-
-
+console.log(
+  printLongestWord([
+    "BoJack",
+    "Princess",
+    "Diane",
+    "a",
+    "Max",
+    "Peanutbutter",
+    "big",
+    "Todd",
+  ])
+);
 
 //_____________________________________________________________
 
-
-
-
-
-
 // V. Objects
 // A.Create an object called user.
-const user={
-  name:"Shilpa",
-  email:"sss@gmail.com",
-  age:12,
-  purchased:[]
-  
-
+const user = {
+  name: "Shilpa",
+  email: "sss@gmail.com",
+  age: 12,
+  purchased: [],
 };
-
 
 // B.Update the user
 // Our user has changed his or her email address. Without changing the original userobject, update the emailvalue to a new email address.
-user.email="shilpa@gmail.com"
+user.email = "shilpa@gmail.com";
 console.log(user);
 //Our user has had a birthday! Without changing the original userobject, increment the agevalue using the postfix operator. Hint: age++
 user.age++;
@@ -452,7 +449,7 @@ user.age++;
 console.log(user);
 
 // C.Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
-user.location="Singapore";
+user.location = "Singapore";
 console.log(user);
 // D.Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchased array.
 user.purchased.push("carbohydrates");
@@ -471,60 +468,54 @@ user.friend = {
   name: "Grace Hopper",
   age: 85,
   location: "Pittsburgh",
-  purchased:[]
+  purchased: [],
 };
 //Console.log just the friend's name
 console.log(user.friend.name);
 //Console.log just the friend's location
 console.log(user.friend.location);
 //CHANGE the friend's age to 55
-user.friend.age=55;
+user.friend.age = 55;
 console.log(user.friend);
 
 //The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
 user.friend.purchased.push("The One Ring");
 //The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
-user.friend.purchased.push( "A latte");
+user.friend.purchased.push("A latte");
 console.log(user.friend);
 console.log(user);
 //Console.log just "A latte" from the friend's purchasedarray.
 console.log(user.friend.purchased[1]);
 // F.Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), and prints each element to the console.
-for(let i=0;i<user.purchased.length;i++){
-console.log(user.purchased[i]
-  );
+for (let i = 0; i < user.purchased.length; i++) {
+  console.log(user.purchased[i]);
 }
 //Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
-for(let i=0;i<user.friend.purchased.length;i++){
-  console.log(user.friend.purchased[i]
-    );
-  }
-
+for (let i = 0; i < user.friend.purchased.length; i++) {
+  console.log(user.friend.purchased[i]);
+}
 
 // G.Write a single function updateUser that takes no parameters. When the function is run, it should:
 //it should increment the user's age by 1
 //make the user's name uppercase
 
-function updateUser(){
-user.age++;
-user.name=user.name.toUpperCase();
+function updateUser() {
+  user.age++;
+  user.name = user.name.toUpperCase();
 }
 updateUser();
 console.log(user);
 
 /*Write a function oldAndLoud that performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our user object, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoud function with user as the argument.*/
 
-function oldAndLoud(person){
+function oldAndLoud(person) {
   person.age++;
-  person.name=person.name.toUpperCase();
+  person.name = person.name.toUpperCase();
   console.log(person);
-  }
-  oldAndLoud(user);
-  //console.log(user);
-
-
+}
+oldAndLoud(user);
+//console.log(user);
 
 //_____________________________________________________________
-
 
 // Extra
