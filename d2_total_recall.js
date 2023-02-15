@@ -140,16 +140,23 @@ const kittenTalks=["...human...why you taking pictures of me?...","...the catnip
 
 //console.log(meow);
 for(let i=1;i<=20;i++){
+    /*For every even number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.*/
     let meow=Math.floor(Math.random(0,1)*3)
     if(i%2===0){
     console.log(kittenTalks[meow]);
     }else{
 console.log("Love me, pet me! HSSSSSS!" );
     }
-/*For every even number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.*/
+
 
 
 }
 ////////////////////////////////
 //*  Find the Median
+//Find the median number in the following nums array, then console.log that number.
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+nums.sort();
+console.log(nums);
+let median=nums[Math.ceil((nums.length)/2)];
+console.log(median);
 ////////////////////////////////
