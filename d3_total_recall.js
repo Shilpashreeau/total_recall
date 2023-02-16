@@ -1,4 +1,5 @@
 //Creating Classes and Factories
+//console.log("Good morning");
 class Hamster {
     constructor(name){
       this.owner = ''
@@ -53,6 +54,7 @@ class Hamster {
       this.weight++
       this.mood--
       this.bankAccount+=10
+      console.log(this.age);
     }
     buyHamster(hamster){
       this.hamsters.push(hamster)
@@ -60,3 +62,44 @@ class Hamster {
       this.bankAccount-=hamster.getPrice()
     }
   }
+  //Instantiate a new Person named Timmy
+  const timmy=new Person("Timmy");
+  
+
+  //Age Timmy five years
+  for(let i=0;i<5;i++){
+  timmy.ageUp();
+  }
+  //At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
+  for(let i=0;i<5;i++){
+    timmy.eat();
+    }
+    //Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good. Have him exercise five times
+    for(let i=0;i<5;i++){
+        timmy.exercise();
+        }
+//Age Timmy 9 years
+for(let i=0;i<9;i++){
+    timmy.ageUp();
+}
+//Create a hamster named "Gus"
+const gus=new Hamster("Gus");
+//Set Gus's owner to the string "Timmy"
+gus.owner="Timmy";
+//Have Timmy "buy" Gus
+timmy.buyHamster(gus);
+//Age Timmy 15 years
+for(let i =0; i < 15; i++){
+    timmy.ageUp()
+  }
+ 
+
+
+//Have Timmy eat twice
+timmy.eat()
+timmy.eat()
+//Have Timmy exercise twice
+timmy.exercise()
+timmy.exercise()
+
+
