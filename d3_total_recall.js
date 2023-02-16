@@ -82,6 +82,7 @@ class Hamster {
 for(let i=0;i<9;i++){
     timmy.ageUp();
 }
+console.log(timmy);
 //Create a hamster named "Gus"
 const gus=new Hamster("Gus");
 //Set Gus's owner to the string "Timmy"
@@ -92,7 +93,8 @@ timmy.buyHamster(gus);
 for(let i =0; i < 15; i++){
     timmy.ageUp()
   }
- 
+  console.log(timmy);
+  console.log(gus);
 
 
 //Have Timmy eat twice
@@ -102,4 +104,40 @@ timmy.eat()
 timmy.exercise()
 timmy.exercise()
 
+//*Chef Make Dinners
+//Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
 
+class Dinner {
+    constructor(appetizer,entree,dessert){
+    this.appetizer=appetizer;
+    this.entree=entree;
+    this.dessert=dessert;
+    //this.dinners=[];
+    }
+
+}
+//Chef should be a factory of Dinner
+//Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+//Have the Chef create 3 dinners, log the dinners
+class Chef  {
+    //Chef should have an array of dinners
+    dinners=[];
+    chefMakesDinner(appetizer,entree,dessert)
+    {
+        let dinner=new Dinner(appetizer,entree,dessert);
+        this.dinners.push(dinner);
+       
+    }
+
+}
+
+const chef=new Chef();
+chef.chefMakesDinner("fries","burger","cupcake");
+chef.chefMakesDinner("samosa","Biriyani","Halwa");
+chef.chefMakesDinner("spring roll","fried rice","ice cream")
+
+
+//console.log(dinner1);
+//console.log(dinner2);
+// console.log(dinner3);
+console.log(chef.dinners);
